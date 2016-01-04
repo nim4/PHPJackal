@@ -52,7 +52,7 @@ $Required_Header_Value = '';
 # Resource_Dir
 # You can change it to mirror site or local directory(Should end
 # with "/")
-$Resource_Dir = "http://nimaghotbi.com/other/PHPJackal/";
+$Resource_Dir = "https://raw.githubusercontent.com/nim4/PHPJackal/master/resource/";
 
 # RFI_URL
 # Script to be used for checking RFI (Tools->Security scanner)
