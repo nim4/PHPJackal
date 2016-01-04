@@ -1,0 +1,157 @@
+* {
+  padding: 0;
+  margin: 0;
+ }
+ 
+ body {
+  font-family: tahoma;
+  font-size: 11px;
+  color: #006400;
+  background-image: url(http://nima.my3gb.com/PHPJackal/images/background.gif);
+  background-repeat: repeat-y;
+  background-color: #000000;
+ }
+ 
+ .left {
+  float:left;
+  padding-top: 20px;
+  width: 120px;
+ }
+
+.left ul li {
+  float: right;
+ }
+
+.left ul li a {
+  margin-top: 2px;
+  font-family: Verdana;
+  font-size: 12px;
+  color: SeaGreen;
+  text-decoration: none;
+  padding-top: 7px;
+  padding-left: 5px;
+  width: 100px;
+  height: 23px;
+  float: right;
+}
+
+.left ul li a:hover {
+  background: #000000;
+ }
+ 
+ .left ul li.active a {
+  color: #003000;
+  background: #000000;
+ }
+ 
+ .right {
+  padding-left: 200px;
+  padding-top: 100px;
+}
+
+ .block {
+  margin-top: 10px;
+  height: 106px;
+  width: 600px;
+ }
+ 
+h1 {
+  font-size: 11px;
+  color: Olive;
+  font-weight: bold;
+ }
+ 
+h2 {
+  font-weight: normal;
+  padding-bottom: 7px;
+  font-size: 10px;
+ }
+ 
+a {
+  color: SeaGreen;
+  text-decoration: none;
+ }
+ 
+a:hover {
+  text-decoration: underline;
+ }
+ 
+ .content {
+
+ }
+ 
+
+.form{
+padding: 5px;
+}
+
+div.fieldwrapper{
+overflow: hidden;
+padding: 5px 0;
+}
+
+div.fieldwrapper label.styled{
+float: left;
+width: 150px;
+text-transform: uppercase;
+border-bottom: 1px solid Olive;
+margin-right: 15px;
+}
+
+div.fieldwrapper div.thefield{
+float: left;
+margin-bottom: 10px;
+}
+
+div.fieldwrapper div.thefield input[type="text"]{
+width: 250px;
+}
+
+div.fieldwrapper div.thefield textarea{
+width: 300px;
+height: 150px;
+}
+
+div.buttonsdiv{
+margin-top: 5px;
+}
+
+div.buttonsdiv input{
+width: 80px;
+background: #e1dfe0;
+}
+
+div.progress-container {
+border: 1px solid #ccc; 
+width: 100px; 
+margin: 2px 5px 2px 0; 
+padding: 1px; 
+float: left; 
+background: white;
+}
+
+div.progress-container > div {
+background-color: Olive ; 
+height: 12px
+}
+
+th{
+background-color: #000000;
+color: #006400;
+font-weight:bold;
+}
+
+tr{
+background-color: #000000;
+color: #006400;
+}
+
+ .normal{
+background-color: #000000;
+color: #006400;
+}
+
+ .highlight{
+background-color: #000000;
+color: #006400;
+}
