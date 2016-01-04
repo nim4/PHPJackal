@@ -71,7 +71,7 @@ $Ignore_Abort = false;
 
 
 #---------------BOF-------------#
-error_reporting ( E_ALL );
+error_reporting (0);
 @ob_clean ();
 ignore_user_abort ( $Ignore_Abort );
 if (! isset ( $_SERVER ))
